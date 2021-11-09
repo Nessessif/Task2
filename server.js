@@ -110,7 +110,9 @@ function getData(res, req) {
                     let sumClass = [0, 0, 0, 0, 0, 0]
                     let sumAll = [0, 0, 0, 0, 0, 0]
                     let sum = [0, 0, 0, 0, 0, 0]
-                    let strSum = filesArray[0].num.toString().substring(0, 2)
+                    let strSum
+                    if (filesArray[0] != undefined)
+                        strSum = filesArray[0].num.toString().substring(0, 2)
                     let strClass = 0
                     let i = 0
                     filesArray.forEach((j, index) => {
