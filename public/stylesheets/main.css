@@ -1,0 +1,36 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+   border: 3px solid grey;
+}
+
+th{
+    border: 3px solid grey;
+ }
+
+ td {
+    
+    border: 1px solid grey;
+ }
+
+ th, td {
+     padding: 10px;
+ }
+
+ .row-summ {
+     font-weight: 700;
+ }
+
+ .row-class {
+    font-weight: 700;
+    text-align: center;
+}

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  form(method='post', action="/uploadfile" enctype='multipart/form-data')
+    input(type='file', name='file')
+    input(type='submit', name='uploadimage', value='Отправить')
+  h3 Cписок файлов: 
+  if files !== undefined
+    ul
+      each file in files
+        li 
+          a(href='/' + file)= file

@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  h1= title
+  table 
+    thead 
+      tr 
+        th(rowspan=2) Б/сч
+        th(colspan=2) ВХОДЯЩЕЕ САЛЬДО
+        th(colspan=2) ОБОРОТЫ
+        th(colspan=2) ИСХОДЯЩЕЕ САЛЬДО
+      tr 
+        th Актив
+        th Пассив 
+        th Дебет
+        th Кредит
+        th Актив
+        th Пассив
+
+    tbody
+      if rows !== undefined
+        each row in rows
+          if row.description
+            tr(class='row-class')
+              td(colspan=7) КЛАСС #{row.num} #{row.description}
+          else if row.is_sum
+            tr(class="row-summ")
+              td #{row.num}
+              td #{row.open_active}
+              td #{row.open_passive}
+              td #{row.debit}
+              td #{row.credit}
+              td #{row.out_active}
+              td #{row.out_passive}
+          else
+            tr
+              td #{row.num}
+              td #{row.open_active}
+              td #{row.open_passive}
+              td #{row.debit}
+              td #{row.credit}
+              td #{row.out_active}
+              td #{row.out_passive}
